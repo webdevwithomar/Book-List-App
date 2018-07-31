@@ -87,6 +87,36 @@ Main
 	cursor: pointer;
 }
 
+#list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#list li {
+	padding: 1rem;
+	background: #eee;
+	border: 1px solid #999;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.remove {
+	background-color: #c0392b;
+	color: #fff;
+	border: none;
+	margin-top: auto;
+}
+
+.remove:hover {
+	cursor: pointer;
+	background-color: rgb(192,70,43);
+}
+
 /*************************************
 Footer
 *************************************/
@@ -118,5 +148,12 @@ Media Queries
 		width: 20%;
 		height: 51px;
 		margin-left: .5rem;
+	}
+	#list {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	#list li {
+		width: 25%;
 	}
 }
