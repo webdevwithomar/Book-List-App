@@ -1,3 +1,7 @@
+/*************************************
+Global
+*************************************/
+
 * {
 	box-sizing: border-box;
 }
@@ -20,6 +24,7 @@ h1, h2, h3 {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	max-width: 1000px;
 }
 
 /*************************************
@@ -95,7 +100,7 @@ Main
 	padding: 0;
 }
 
-#list li {
+.listItem {
 	padding: 1rem;
 	background: #eee;
 	border: 1px solid #999;
@@ -115,6 +120,25 @@ Main
 .remove:hover {
 	cursor: pointer;
 	background-color: rgb(192,70,43);
+}
+
+.remove:focus,
+.submit:focus,
+.searchInput:focus {
+	outline: none;
+}
+
+.search {
+	padding: 1rem;
+	background-color: #ccc;
+	color: rgb(255,255,255);
+	text-align: center;
+}
+
+.searchInput {
+	width: 70%;
+	padding: 1rem;
+	border: 10px;
 }
 
 /*************************************
@@ -155,5 +179,8 @@ Media Queries
 	}
 	#list li {
 		width: 25%;
+	}
+	.searchInput {
+		width: 50%;
 	}
 }
