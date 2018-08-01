@@ -110,22 +110,62 @@ Main
 	align-items: center;
 }
 
-.remove {
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.remove,
+.edit,
+.save {
 	background-color: #c0392b;
 	color: #fff;
 	border: none;
 	margin-top: auto;
 }
 
-.remove:hover {
+.remove:hover,
+.edit:hover,
+.save:hover {
 	cursor: pointer;
 	background-color: rgb(192,70,43);
 }
 
 .remove:focus,
+.edit:focus,
+.save:focus,
 .submit:focus,
+.edit-mode:focus,
 .searchInput:focus {
 	outline: none;
+}
+
+.edit {
+	background-color: rgb(52,152,219);
+	margin-right: .5rem;
+}
+
+.edit:hover {
+	background-color: rgb(70,152,219);
+}
+
+.edit-mode {
+	border: 1px dotted #ccc;
+	padding: .4rem;
+}
+
+.save {
+	background-color: #27ae60;
+	margin-right: .5rem;
+}
+
+.save:hover {
+	background-color: rgb(50,174,96);
+}
+
+span {
+	margin-bottom: .5rem;
 }
 
 .search {
