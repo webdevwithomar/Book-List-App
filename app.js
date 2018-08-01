@@ -78,3 +78,19 @@ ul.addEventListener('click', e => {
 		li.removeChild(input);
 	}
 });
+
+// Search
+
+searchList = () => {
+	const input = document.getElementById('search');
+	const filter = input.value.toUpperCase();
+	const li = document.querySelectorAll('.listItem');
+	for (let i = 0; i < li.length; i++) {
+		let span = li[i].getElementsByTagName('span')[0];
+		if (span.textContent.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = '';
+		} else {
+			li[i].style.display = 'none';
+		}
+	}
+}
